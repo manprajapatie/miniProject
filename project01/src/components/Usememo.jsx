@@ -1,21 +1,51 @@
-import React, { useMemo, useState } from 'react'
+import React from 'react'
+import { useState, useMemo } from "react";
 
 const Usememo = () => {
-    const [count, setCount] = useState(0)
-    const [Inc, setInc] = useState(2)
 
-    function man(){
-        return number * 2
+  const [count, setCount] = useState(0);
+  const [todos, setTodos] = useState([]);
+
+
+  const increment = () => {
+    setCount((c) => c + 1);
+  };
+  const addTodo = () => {
+    setTodos((t) => [...t, "New Todo"]);
+  };
+
+  const expensiveCalculation = (num) => {
+    console.log("Calculating...");
+    for (let i = 0; i < 1000000000; i++) {
+      num += 1;
     }
+    return num;
+  };
 
-    let memo = useMemo(()=> man(number), [number])
+
+  //Defination
+  //when any of state is updated the whole component is re-rendered even if this is not releted to each other to prevend this unwanted re-render we use useMemo that will memorize it's previous value and only update it's value when actual changes happen in it's state.
+  const calculation = useMemo(() => expensiveCalculation(count), [count]);
+
   return (
-    <>
-    <h1>it is memorization {memo}</h1>
-    <button onClick={()=> setCount(number + 1)}>count</button>
-    <button onClick={()=> setInc(number + 1)}>Increase</button>
-      
-    </>
+    <div>
+      <div>
+        <div>
+          <h2>My Todos</h2>
+          {todos.map((todo, index) => {
+            return <p key={index}>{todo}</p>;
+          })}
+          <button onClick={addTodo}>Add Todo</button>
+        </div>
+        <hr />
+        <div>
+          Count: {count}
+          <button onClick={increment}>+</button>
+          <h2>Expensive Calculation</h2>
+          {calculation}
+        </div>
+      </div>
+    </div>
   )
 }
 
