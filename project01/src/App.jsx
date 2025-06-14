@@ -4,6 +4,8 @@ import './App.css'
 import Props from './components/Props.jsx'
 import UseReducer from './components/UseReducer.jsx'
 import Usememo from './components/Usememo.jsx'
+import UseCallback from './components/UseCallback.jsx'
+import { UseDebounsing } from './components/deBounsing.js'
 
 function App() {
   
@@ -13,7 +15,9 @@ function App() {
     {/* <UseState/> */}
     {/* <Props/> */}
     {/* <UseReducer/> */}
-    <Usememo/>
+    {/* <Usememo/> */}
+    {/* <UseCallback/> */}
+    <UseDebounsing/>
     </>
   )
 }
