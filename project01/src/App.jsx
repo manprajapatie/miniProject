@@ -6,6 +6,7 @@ import UseReducer from './components/UseReducer.jsx'
 import Usememo from './components/Usememo.jsx'
 import UseCallback from './components/UseCallback.jsx'
 import { UseDebounsing } from './components/deBounsing.js'
+import BtnDisable from './components/btnDisable.jsx'
 
 function App() {
   
@@ -17,7 +18,9 @@ function App() {
     {/* <UseReducer/> */}
     {/* <Usememo/> */}
     {/* <UseCallback/> */}
-    <UseDebounsing/>
+    {/* <UseDebounsing/> */}
+    {/* <BtnDisable/> */}
+    <EventDeligation/>
     </>
   )
 }
