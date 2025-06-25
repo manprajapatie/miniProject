@@ -7,6 +7,7 @@ import Usememo from './components/Usememo.jsx'
 import UseCallback from './components/UseCallback.jsx'
 import { UseDebounsing } from './components/deBounsing.js'
 import BtnDisable from './components/btnDisable.jsx'
+import EventDeligation from './components/EventDeligation.jsx'
 
 function App() {
   
