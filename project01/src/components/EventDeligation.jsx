@@ -13,6 +13,8 @@ const EventDeligation = () => {
 
   }
 
+let a = [2]
+
 
   return (
 
