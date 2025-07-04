@@ -11,6 +11,8 @@ const EventDeligation = () => {
       setColor(data)
     }
 
+
+    
   }
 
 let a = [2]
