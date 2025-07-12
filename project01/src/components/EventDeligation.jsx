@@ -28,6 +28,9 @@ let a = [2]
 
     }}>
 
+
+
+
     </div>
      
      <ul onClick={handleColor}>
